@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponentComponent implements OnInit {
 
-  //Dá pra declarar do 
   name: string = 'Pablo';
+  sobrenome = "Pacheco";
   age = 45;
   hobbies= ["Cantar", "Correr", "Nadar"];
   moto = {
