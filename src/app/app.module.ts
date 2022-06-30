@@ -7,7 +7,10 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SecondComponentComponent } from './components/second-component/second-component.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { PokecardComponent } from './components/pokecard/pokecard.component';
+import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,13 +18,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FirstComponentComponent,
     SecondComponentComponent,
     PieChartComponent,
+    PokecardComponent,
+    
     
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     AppRoutingModule,
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

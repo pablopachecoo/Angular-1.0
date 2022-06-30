@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>{{nome}}</mat-card-title>
+      <mat-card-subtitle>Large</mat-card-subtitle>
+      <img src={{imgUrl}} (error) ="onImgError($event)">
+      <!-- <img mat-card-lg-image src={{imgUrl}} alt="Placeholder" > -->
+    </mat-card-title-group>
+    <mat-card-content>
+      {{description}}
+    </mat-card-content>
+</mat-card>
+
+
+<button (click)="onSave()">Get</button>
