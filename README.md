@@ -1,4 +1,4 @@
-# ProjetoAngular
+# Projeto Angular
 
 Projeto em Angular consumindo a pokeapi
 
