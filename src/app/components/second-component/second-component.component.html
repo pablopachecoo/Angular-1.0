@@ -1,1 +1,14 @@
-<p>Segundo Componente</p>
+<h2>Exibindo app-second-component</h2>
+
+<h2>O Nome é {{name}}</h2>
+<p>O Email é {{userInfo.email}}</p>
+<p>O Role é {{userInfo.role}}</p>
+
+
+<h2 [ngStyle]="{'font-size': size + 'px', color: color, 'font-family': 'Arial'}">Diretivas no angular, cor fonte e tamanho da fonte.</h2>
+<h2 [ngClass]="classes">Teste ngClass verde e 24px</h2>
+<h2 *ngIf="!canShow">canShow é False</h2>
+<h2 *ngIf="name === 'Pablo'; else nomeNaoEncontrado">o Nome é Pablo</h2>
+<ng-template #nomeNaoEncontrado>
+    <h2>O nome {{name}} não foi encontrado</h2>
+</ng-template>

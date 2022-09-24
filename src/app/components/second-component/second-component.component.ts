@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-second-component',
@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponentComponent implements OnInit {
 
+  @Input() name: string = '';
+  @Input() userInfo!: {email: string, role: string}
+
+  canShow: boolean = false;
+  size = 48;
+  font = 'Arial'
+  color = 'red';
+  
+  classes = ["green-title", "small-title"];
   constructor() { }
 
   ngOnInit(): void {

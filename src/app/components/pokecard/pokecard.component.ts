@@ -22,6 +22,7 @@ export class PokecardComponent implements OnInit {
   onImgError(event) { 
     event.target.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png';
   }
+  //descricao : species{https://pokeapi.co/api/v2/pokemon-species/132/} flavor_text 
   description = "A Transform Pokémon. It is able to rearrange the cells of its body and assume any form. Its only attack is Transform."
 
 

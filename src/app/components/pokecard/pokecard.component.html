@@ -1,14 +1,84 @@
+
+<html>
+  <head>
+      <!-- head definitions go here -->
+  </head>
+  <body>
+      <div>
+        <div class="row">
+          <div class="column">
+            <mat-card class="card">
+              <mat-card-title-group>
+                <mat-card-title>{{nome}}</mat-card-title>
+                <mat-card-subtitle>Large</mat-card-subtitle>
+                <img src={{imgUrl}} (error) ="onImgError($event)" alt=""/>
+                <!-- <img mat-card-lg-image src={{imgUrl}} alt="Placeholder" > -->
+                <!-- <form>
+                  <input type="text" id="lname" name="lname">
+                </form> -->
+                <!-- <button (click)="onSave()">Get</button> -->
+              
+              </mat-card-title-group>
+              <mat-card-content class="card-content">
+                <div class="card-text">
+                  {{description}}
+                </div>
+              </mat-card-content>
+          </mat-card>
+          </div>
+      </div>
+
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{imgUrl}} (error) ="onImgError($event)" />
+        <mat-card-content class="card-content">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small,
+          </p>
+        <button (click)="onSave()">Get</button>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+      </mat-card>
+    </div>
+  </body>
+</html>
+
+
+<h2 [ngStyle]="{ 'font-size':'26px'}">iniciando componente</h2>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
 <mat-card class="example-card">
     <mat-card-title-group>
       <mat-card-title>{{nome}}</mat-card-title>
       <mat-card-subtitle>Large</mat-card-subtitle>
       <img src={{imgUrl}} (error) ="onImgError($event)">
-      <!-- <img mat-card-lg-image src={{imgUrl}} alt="Placeholder" > -->
+      <img mat-card-lg-image src={{imgUrl}} alt="Placeholder" >
     </mat-card-title-group>
     <mat-card-content>
       {{description}}
     </mat-card-content>
-</mat-card>
+</mat-card> -->
 
 
-<button (click)="onSave()">Get</button>

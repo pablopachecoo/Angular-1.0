@@ -8,3 +8,103 @@
                 0 1px 1px 0 rgba(0,0,0,1), 
                 0 1px 3px 0 rgba(0,0,0,1);
 }
+
+* {
+  box-sizing: border-box;
+}
+/* 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+} */
+
+.teste{
+
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+mat-card-content {
+  align-items:center
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+
+  justify-content:center;
+  align-items:center;
+  width: 322px;
+  height: 450px;
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card-text{
+  
+  position: absolute;
+  width: 221px;
+  height: 118px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.card-text{
+  
+  position: absolute;
+  width: 221px;
+  height: 118px;
+
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  
+}
+.mat-card-image {
+  max-height: 257px;
+
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+.card-content{
+  text-align: center
+  
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
