@@ -9,8 +9,12 @@ import { ConfigServiceService } from '../../config/config-service.service';
 })
 export class PokecardComponent implements OnInit {
 
+  teste:boolean = true;
+  
+
   objeto: Object;
-  nome = ''
+  nome = 'Pokemon'
+  tipo = 'Type'
   imgUrl=''
   response=''
   constructor(private service: ConfigServiceService ) { }
@@ -27,18 +31,33 @@ export class PokecardComponent implements OnInit {
 
 
 
-  onSave(){
+  onSave(nome){
     console.log("iniciando o get https://pokeapi.co/api/v2/pokemon/lugia")
     const teste = this.service.getConfig()
     .subscribe((data) => {
       this.objeto = data;
       console.log(this.objeto)
       let parsedJSON = JSON.parse(JSON.stringify(this.objeto))
-      this.nome=parsedJSON["species"].name
+      this.nome=parsedJSON["species"].name.charAt(0).toUpperCase()+ parsedJSON["species"].name.slice(1);
+      const tipoTemp = parsedJSON["types"]
+      var tipo = Array();
+
+      // tipo.forEach(element => console.log(element));
+      this.description
+      tipoTemp.forEach(function (value) {
+        tipo.push(value["type"].name.charAt(0).toUpperCase() + value["type"].name.slice(1))
+        // console.log(value["type"].name)
+
+        
+      });
+      this.tipo = tipo.join(" / ")
       this.imgUrl=parsedJSON["sprites"].front_default
       // this.description=parsedJSON["sprites"].front_default https://pokeapi.co/api/v2/pokemon-species/132/ 
       
   });
+
+  const teste2 = this.service.getConfig()
+    .subscribe((data) => {})
     //species.name
     //console.log(this.response)
     // console.log(parsedJSON["nbf"]) // 156412888

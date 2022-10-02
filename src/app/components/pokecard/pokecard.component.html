@@ -5,30 +5,32 @@
   </head>
   <body>
       <div>
-        <div class="row">
-          <div class="column">
+
             <mat-card class="card">
-              <mat-card-title-group>
-                <mat-card-title>{{nome}}</mat-card-title>
-                <mat-card-subtitle>Large</mat-card-subtitle>
-                <img src={{imgUrl}} (error) ="onImgError($event)" alt=""/>
+                <mat-card-title-group>
+                  <mat-card-title>{{nome}}</mat-card-title>
+                  <mat-card-subtitle>{{tipo}}</mat-card-subtitle>
+                </mat-card-title-group>
+              <div class="div-pokemon">
+                <img class="img-pokemon" src={{imgUrl}} (error) ="onImgError($event)" alt=""/>
+                <!-- <p *ngIf="nome === 'Pokemon';"> o nome é paulin</p> -->
+              </div>
+                
                 <!-- <img mat-card-lg-image src={{imgUrl}} alt="Placeholder" > -->
                 <!-- <form>
-                  <input type="text" id="lname" name="lname">
+
                 </form> -->
                 <!-- <button (click)="onSave()">Get</button> -->
-              
-              </mat-card-title-group>
-              <mat-card-content class="card-content">
-                <div class="card-text">
-                  {{description}}
-                </div>
+              <mat-card-content>
+                {{description}}
               </mat-card-content>
-          </mat-card>
-          </div>
-      </div>
+              <input type="text" id="lname" name="lname" (keyup.enter)="onSave(nome)" >
+              <button (click)="onSave(nome)">Get</button>
+              
+            </mat-card>
 
-      <mat-card class="card">
+
+      <!-- <mat-card class="card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Shiba Inu</mat-card-title>
@@ -37,16 +39,15 @@
         <img mat-card-image src={{imgUrl}} (error) ="onImgError($event)" />
         <mat-card-content class="card-content">
           <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small,
+            {{description}}
           </p>
-        <button (click)="onSave()">Get</button>
-        </mat-card-content>
+       
+        </mat-card-content> -->
         <!-- <mat-card-actions>
           <button mat-button>LIKE</button>
           <button mat-button>SHARE</button>
         </mat-card-actions> -->
-      </mat-card>
+      <!-- </mat-card> -->
     </div>
   </body>
 </html>
@@ -57,13 +58,6 @@
 
 
   
-
-
-
-
-
-
-
 
 
 

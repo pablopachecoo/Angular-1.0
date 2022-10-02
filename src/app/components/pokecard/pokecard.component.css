@@ -41,12 +41,21 @@ body {
   clear: both;
 }
 mat-card-content {
-  align-items:center
+
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
 }
+
+.poke-info{
+  position: absolute;
+}
+
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-
   justify-content:center;
   align-items:center;
   width: 322px;
@@ -59,18 +68,32 @@ mat-card-content {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+
+
+mat-card-title-group{
+  text-align:left;
+}
+
+
+.img-pokemon {
+  height: 200px;
+  width: 200px;
+  max-width: 200px;
+  max-height: 200px;
+
+
+}
 .card-text{
   
   position: absolute;
   width: 221px;
   height: 118px;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  text-align: center;
+  
 }
 
 .card-text{
@@ -78,7 +101,6 @@ mat-card-content {
   position: absolute;
   width: 221px;
   height: 118px;
-
   font-family: 'Inter';
   font-style: bold;
   font-weight: 400;
@@ -86,9 +108,9 @@ mat-card-content {
   line-height: 15px;
   
 }
+
 .mat-card-image {
   max-height: 257px;
-
 }
 
 img {
@@ -96,7 +118,8 @@ img {
 }
 
 .card-content{
-  text-align: center
+  text-align: center;
+  align-items:center;
   
 }
 
