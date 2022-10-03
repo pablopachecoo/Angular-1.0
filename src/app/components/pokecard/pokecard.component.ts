@@ -31,7 +31,7 @@ export class PokecardComponent implements OnInit {
 
 
 
-  onSave(nome){
+  onSave(nomne){
     console.log("iniciando o get https://pokeapi.co/api/v2/pokemon/lugia")
     const teste = this.service.getConfig()
     .subscribe((data) => {
@@ -40,6 +40,7 @@ export class PokecardComponent implements OnInit {
       let parsedJSON = JSON.parse(JSON.stringify(this.objeto))
       this.nome=parsedJSON["species"].name.charAt(0).toUpperCase()+ parsedJSON["species"].name.slice(1);
       const tipoTemp = parsedJSON["types"]
+      // Retornando os tipos do pokemons
       var tipo = Array();
 
       // tipo.forEach(element => console.log(element));
